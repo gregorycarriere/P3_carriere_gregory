@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+   /* box-sizing est appliqué à tous les éléments */
+    margin: 0;
+    /* Réinitialisation de la marge */
+}
+
+html{
+    scroll-behavior: smooth;
+    justify-content: center;
+    max-width: 1441px;
+    margin: auto;
+}
+
+//                                  Variables
+$primary-color:#9356DC;
+$secondary-color:#FF79DA;
+$tertiary-color:#99E2D0;
+
+$title-size:1.5em;
+$sub-title-size:1.1em;
+
+
+//                                  Header                                  
+.header{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+
+    &__logo{
+        width: 11em;
+        margin: auto;
+        padding-top: 1.2em;
+    }
+
+    &__location{
+        display: flex;
+        width: 100%;
+        padding: 1em;
+        margin-top: 0.8em;
+        box-shadow: 0 0.1em 0.3em 0 rgb(204, 198, 198) inset;
+        justify-content: center;
+        background-color: rgb(234, 234, 234);
+        color: rgb(53, 53, 53);
+
+        &__icon{
+            margin-right: 1em;
+        }
+
+        &__text{
+            font-weight: 700;
+        }
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5em 1.2em;
+        background-color: rgb(246, 246, 246);
+
+        &__title{
+            font-size: $title-size;
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+            font-weight:900;
+        }
+
+        &__subtitle{
+            font-size: $sub-title-size;
+            color: rgb(77, 77, 77);
+        }
+
+        &__button{
+            margin: 1.5em 0 2.1em 0;
+            padding: 1em 1.2em;
+            border-radius: 25px;
+            color: #fff;
+            background: linear-gradient(175deg, $secondary-color 0%, $primary-color 100%);
+            border-style: none;
+            box-shadow: 0 0.2em 0.5em 0.2em rgb(210, 210, 210);
+            cursor: pointer;
+        }
+    }
+}
+
+
