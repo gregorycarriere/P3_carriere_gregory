@@ -1,0 +1,19 @@
+{
+  "name": "p3_carriere_gregory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregorycarriere/P3_carriere_gregory.git"
+  },
+  "author": "carriere-gregory",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregorycarriere/P3_carriere_gregory/issues"
+  },
+  "homepage": "https://github.com/gregorycarriere/P3_carriere_gregory#readme",
+  "description": ""
+}
