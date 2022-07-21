@@ -6,6 +6,7 @@
   /* box-sizing est appliqué à tous les éléments */
   margin: 0;
   /* Réinitialisation de la marge */
+  text-decoration: none;
 }
 
 html {
@@ -13,13 +14,13 @@ html {
   justify-content: center;
   max-width: 1441px;
   margin: auto;
+  font-family: "Roboto", sans-serif;
 }
 
 /*                                      Header                                      */
 .header {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
 }
 .header a {
   margin: auto;
@@ -82,11 +83,10 @@ html {
 .fonct {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
   margin: 0 1.5em 3em 1.5em;
 }
 .fonct__title {
-  font-weight: 900;
+  font-weight: 800;
   margin: 2em 0 1.5em 0;
 }
 .fonct__box {
@@ -97,6 +97,7 @@ html {
   border-radius: 20px;
   box-shadow: 0 0.2em 0.5em 0.1em rgb(223, 223, 223);
   align-items: center;
+  cursor: pointer;
 }
 .fonct__box:hover {
   background-color: rgb(245, 237, 255);
@@ -118,11 +119,115 @@ html {
 }
 .fonct__box__icon {
   color: rgb(126, 126, 126);
-  margin: 0 1em;
+  margin: 0 1.3em 0 1em;
   font-size: 1.1em;
 }
 .fonct__box__text {
   font-size: 1em;
+}
+
+/*                                 Restaurants section                                   */
+.restos {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(246, 246, 246);
+  padding: 0 1.3em 2.8em 1.3em;
+}
+.restos__title {
+  font-weight: 800;
+  margin: 2.3em 0 0.9em 0;
+}
+.restos__box {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+}
+.restos a {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 255px;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1.1em;
+  box-shadow: 0 0.2em 0.5em 0.1em rgb(223, 223, 223);
+}
+.restos a .card-image {
+  display: flex;
+  height: 70%;
+  width: 100%;
+  justify-content: flex-end;
+  border-radius: 15px 15px 0 0;
+}
+.restos a .card-image__box {
+  width: 100%;
+  max-height: 335px;
+  border-radius: 15px 15px 0 0;
+}
+.restos a .card-image__box__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+.restos a .card-image p {
+  background-color: #99E2D0;
+  color: rgb(0, 135, 102);
+  height: fit-content;
+  padding: 6px 12px;
+  margin: 12px;
+  font-weight: 500;
+  border-radius: 3px;
+  font-size: 0.9em;
+  position: absolute;
+}
+.restos a .card-legend {
+  display: flex;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
+  height: 30%;
+  justify-content: space-between;
+}
+.restos a .card-legend div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.restos a .card-legend i {
+  margin: 1em 0.6em 0 0;
+}
+.restos a:hover {
+  box-shadow: 0 0.2em 0.1em 0.1em rgb(197, 197, 197);
+}
+
+/*                                      Footer                                        */
+footer {
+  background-color: rgb(53, 53, 53);
+  color: #fff;
+  height: 195px;
+  padding: 20px;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+  font-size: 1.2em;
+}
+footer li {
+  list-style: none;
+  margin: 20px 0;
+}
+footer ul {
+  padding: 0;
+  margin: 8px 0;
+}
+footer a {
+  color: #fff;
+  display: flex;
+  align-items: baseline;
+}
+footer p {
+  margin-left: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
