@@ -25,28 +25,27 @@ html {
   right: 0;
   bottom: 0;
   z-index: 1;
+  margin: auto;
   width: 200px;
   height: 200px;
-  margin: auto;
+  animation: affich-loader 1.5s forwards;
+}
+.loader__spinner {
+  width: 200px;
+  height: 200px;
   border: 16px solid #f3f3f3;
   border-radius: 500%;
   border-top: 16px solid #9356DC;
   border-left: 16px solid #FF79DA;
   border-right: 16px solid #99E2D0;
-  animation: spin 1.5s linear, affich-loader 1.5s forwards;
+  animation: spin 1.5s linear;
+  margin: auto;
 }
-
-.loader-logo {
+.loader__logo {
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
   width: 150px;
   height: 60px;
-  margin: auto;
-  animation: affich-loader 1.5s forwards;
+  margin: -125px 0 0 25px;
 }
 
 @keyframes spin {

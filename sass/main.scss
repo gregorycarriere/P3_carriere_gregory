@@ -36,29 +36,33 @@ $sub-title-size:1.1em;
     right: 0;
     bottom: 0;
     z-index: 1;
+    margin: auto;
     width: 200px;
     height: 200px;
-    margin: auto;
-    border: 16px solid #f3f3f3;
-    border-radius: 500%;
-    border-top: 16px solid $primary-color;
-    border-left: 16px solid $secondary-color;
-    border-right: 16px solid $tertiary-color;
-    animation: spin 1.5s linear, affich-loader 1.5s forwards; 
+    animation: affich-loader 1.5s forwards; 
+
+    &__spinner{
+        width: 200px;
+        height: 200px;
+        border: 16px solid #f3f3f3;
+        border-radius: 500%;
+        border-top: 16px solid $primary-color;
+        border-left: 16px solid $secondary-color;
+        border-right: 16px solid $tertiary-color;
+        animation: spin 1.5s linear;
+        margin: auto;
+        
+    }
+
+    &__logo{
+        position: absolute;
+        width: 150px;
+        height: 60px;
+
+        margin: -125px 0 0 25px;
+    }
 }
 
-.loader-logo{
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    width: 150px;
-    height: 60px;
-    margin: auto;
-    animation: affich-loader 1.5s forwards; 
-}
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
