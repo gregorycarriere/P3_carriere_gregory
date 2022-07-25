@@ -17,6 +17,72 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+/*                                      Loader                                       */
+.loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 500%;
+  border-top: 16px solid #9356DC;
+  border-left: 16px solid #FF79DA;
+  border-right: 16px solid #99E2D0;
+  animation: spin 1.5s linear, affich-loader 1.5s forwards;
+}
+
+.loader-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 150px;
+  height: 60px;
+  margin: auto;
+  animation: affich-loader 1.5s forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes affich-loader {
+  0% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes affich {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.content {
+  animation: affich 1.75s;
+}
+
 /*                                      Header                                      */
 .header {
   display: flex;
@@ -44,6 +110,12 @@ html {
 }
 .header__location__text {
   font-weight: 700;
+  border: none;
+  background-color: rgb(234, 234, 234);
+  width: 150px;
+  height: auto;
+  color: rgb(53, 53, 53);
+  padding-bottom: 3px;
 }
 .header__info {
   display: flex;
@@ -108,12 +180,11 @@ html {
   border-radius: 20px;
   box-shadow: 0 0.2em 0.5em 0.1em rgb(223, 223, 223);
   align-items: center;
-  cursor: pointer;
 }
 @media screen and (min-width: 699px) {
   .fonct__box {
-    width: 29.4%;
-    margin: 0 0.8em;
+    width: 32%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 992px) {
@@ -187,13 +258,15 @@ html {
 }
 @media screen and (min-width: 699px) {
   .restos a {
-    width: 47.5%;
-    margin: 0.5em;
+    width: 48%;
+    margin: 0.5em auto;
   }
 }
 @media (min-width: 992px) {
   .restos a {
-    width: 23.3%;
+    width: 48%;
+    height: auto;
+    margin: 1em auto;
   }
 }
 .restos a .card-image {
@@ -202,6 +275,11 @@ html {
   width: 100%;
   justify-content: flex-end;
   border-radius: 15px 15px 0 0;
+}
+@media (min-width: 992px) {
+  .restos a .card-image {
+    height: 80%;
+  }
 }
 .restos a .card-image__box {
   width: 100%;
@@ -233,6 +311,11 @@ html {
   height: 30%;
   justify-content: space-between;
 }
+@media (min-width: 992px) {
+  .restos a .card-legend {
+    height: 20%;
+  }
+}
 .restos a .card-legend div {
   display: flex;
   flex-direction: column;
@@ -252,6 +335,20 @@ footer {
   height: 195px;
   padding: 20px;
 }
+@media screen and (min-width: 699px) {
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 footer h2 {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
@@ -261,6 +358,16 @@ footer li {
   list-style: none;
   margin: 20px 0;
 }
+@media screen and (min-width: 699px) {
+  footer li {
+    margin: 10px 0 0 0;
+  }
+}
+@media (min-width: 992px) {
+  footer li {
+    margin: 10px 0 0 0;
+  }
+}
 footer ul {
   padding: 0;
   margin: 8px 0;
@@ -269,6 +376,16 @@ footer a {
   color: #fff;
   display: flex;
   align-items: baseline;
+}
+@media screen and (min-width: 699px) {
+  footer a {
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) {
+  footer a {
+    justify-content: center;
+  }
 }
 footer p {
   margin-left: 8px;
