@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded"
+    "index": "sass --watch ./sass/main.scss:./css/style.css --style expanded --no-source-map",
+    "resto": "sass --watch ./sass/resto.scss:./css/resto.css --style expanded --no-source-map"
   },
   "repository": {
     "type": "git",

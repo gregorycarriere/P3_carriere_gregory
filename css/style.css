@@ -19,20 +19,20 @@ html {
 
 /*                                      Loader                                       */
 .loader {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: -999;
   margin: auto;
   width: 200px;
   height: 200px;
   animation: affich-loader 1.5s forwards;
 }
 .loader__spinner {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border: 16px solid #f3f3f3;
   border-radius: 500%;
   border-top: 16px solid #9356DC;
@@ -43,11 +43,12 @@ html {
 }
 .loader__logo {
   position: absolute;
-  width: 150px;
+  width: 160px;
   height: 60px;
-  margin: -125px 0 0 25px;
+  margin: -135px 0 0 30px;
 }
 
+/*                                      Keyframes                                       */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -76,6 +77,24 @@ html {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes heart-fill {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes heart-reset {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .content {
@@ -315,13 +334,39 @@ html {
     height: 20%;
   }
 }
-.restos a .card-legend div {
+.restos a .card-legend__text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.restos a .card-legend i {
-  margin: 1em 0.6em 0 0;
+.restos a .card-legend__like {
+  height: fit-content;
+  margin: 1em 0.5em;
+  z-index: 1000;
+}
+.restos a .card-legend__like:hover > .card-legend__like__heart--full {
+  animation: heart-fill 0.2s linear forwards;
+}
+.restos a .card-legend__like:hover > .card-legend__like__heart {
+  animation: heart-reset 0.4s linear forwards;
+}
+.restos a .card-legend__like__heart {
+  font-size: 1.4em;
+  z-index: 1000;
+}
+.restos a .card-legend__like__heart--full {
+  position: absolute;
+  z-index: 1000;
+  font-size: 1.4em;
+  margin-left: -1em;
+  background: linear-gradient(60deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: -moz-linear-gradient(60deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: -webkit-linear-gradient(60deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 .restos a:hover {
   box-shadow: 0 0.2em 0.1em 0.1em rgb(197, 197, 197);
@@ -389,5 +434,3 @@ footer a {
 footer p {
   margin-left: 8px;
 }
-
-/*# sourceMappingURL=style.css.map */
