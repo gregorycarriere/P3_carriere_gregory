@@ -175,20 +175,9 @@ html {
   flex-direction: column;
   margin: 0 1.5em 3em 1.5em;
 }
-@media screen and (min-width: 699px) {
-  .fonct {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
 .fonct__title {
   font-weight: 800;
   margin: 2em 0 1.5em 0;
-}
-@media screen and (min-width: 699px) {
-  .fonct__title {
-    width: 100%;
-  }
 }
 .fonct__box {
   display: flex;
@@ -198,17 +187,6 @@ html {
   border-radius: 20px;
   box-shadow: 0 0.2em 0.5em 0.1em rgb(223, 223, 223);
   align-items: center;
-}
-@media screen and (min-width: 699px) {
-  .fonct__box {
-    width: 32%;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 992px) {
-  .fonct__box {
-    width: 30.6%;
-  }
 }
 .fonct__box:hover {
   background-color: rgb(245, 237, 255);
@@ -228,21 +206,10 @@ html {
   font-size: 0.9em;
   margin-left: -11px;
 }
-@media screen and (min-width: 699px) {
-  .fonct__box__nb {
-    width: 25px;
-    height: 25px;
-  }
-}
 .fonct__box__icon {
   color: rgb(126, 126, 126);
   margin: 0 1.3em 0 1em;
   font-size: 1.1em;
-}
-@media screen and (min-width: 699px) {
-  .fonct__box__icon {
-    margin-right: 1em;
-  }
 }
 .fonct__box__text {
   font-size: 1em;
@@ -274,43 +241,29 @@ html {
   margin-bottom: 1.1em;
   box-shadow: 0 0.2em 0.5em 0.1em rgb(223, 223, 223);
 }
-@media screen and (min-width: 699px) {
-  .restos a {
-    width: 48%;
-    margin: 0.5em auto;
-  }
+.restos a:hover {
+  box-shadow: 0 0.2em 0.1em 0.1em rgb(197, 197, 197);
 }
-@media (min-width: 992px) {
-  .restos a {
-    width: 48%;
-    height: auto;
-    margin: 1em auto;
-  }
-}
-.restos a .card-image {
+
+.card-image {
   display: flex;
   height: 70%;
   width: 100%;
   justify-content: flex-end;
   border-radius: 15px 15px 0 0;
 }
-@media (min-width: 992px) {
-  .restos a .card-image {
-    height: 80%;
-  }
-}
-.restos a .card-image__box {
+.card-image__box {
   width: 100%;
   max-height: 335px;
   border-radius: 15px 15px 0 0;
 }
-.restos a .card-image__box__image {
+.card-image__box__image {
   width: 100%;
   height: 100%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.restos a .card-image p {
+.card-image p {
   background-color: #99E2D0;
   color: rgb(0, 135, 102);
   height: fit-content;
@@ -321,7 +274,8 @@ html {
   font-size: 0.9em;
   position: absolute;
 }
-.restos a .card-legend {
+
+.card-legend {
   display: flex;
   padding: 12px;
   background-color: #fff;
@@ -329,32 +283,27 @@ html {
   height: 30%;
   justify-content: space-between;
 }
-@media (min-width: 992px) {
-  .restos a .card-legend {
-    height: 20%;
-  }
-}
-.restos a .card-legend__text {
+.card-legend__text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.restos a .card-legend__like {
+.card-legend__like {
   height: fit-content;
   margin: 1em 0.5em;
   z-index: 1000;
 }
-.restos a .card-legend__like:hover > .card-legend__like__heart--full {
+.card-legend__like:hover > .card-legend__like__heart--full {
   animation: heart-fill 0.2s linear forwards;
 }
-.restos a .card-legend__like:hover > .card-legend__like__heart {
+.card-legend__like:hover > .card-legend__like__heart {
   animation: heart-reset 0.4s linear forwards;
 }
-.restos a .card-legend__like__heart {
+.card-legend__like__heart {
   font-size: 1.4em;
   z-index: 1000;
 }
-.restos a .card-legend__like__heart--full {
+.card-legend__like__heart--full {
   position: absolute;
   z-index: 1000;
   font-size: 1.4em;
@@ -368,9 +317,6 @@ html {
   -webkit-text-fill-color: transparent;
   opacity: 0;
 }
-.restos a:hover {
-  box-shadow: 0 0.2em 0.1em 0.1em rgb(197, 197, 197);
-}
 
 /*                                      Footer                                        */
 footer {
@@ -378,20 +324,6 @@ footer {
   color: #fff;
   height: 195px;
   padding: 20px;
-}
-@media screen and (min-width: 699px) {
-  footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-@media (min-width: 992px) {
-  footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
 }
 footer h2 {
   font-family: "Shrikhand", cursive;
@@ -402,16 +334,6 @@ footer li {
   list-style: none;
   margin: 20px 0;
 }
-@media screen and (min-width: 699px) {
-  footer li {
-    margin: 10px 0 0 0;
-  }
-}
-@media (min-width: 992px) {
-  footer li {
-    margin: 10px 0 0 0;
-  }
-}
 footer ul {
   padding: 0;
   margin: 8px 0;
@@ -421,16 +343,78 @@ footer a {
   display: flex;
   align-items: baseline;
 }
-@media screen and (min-width: 699px) {
-  footer a {
-    justify-content: center;
-  }
-}
-@media (min-width: 992px) {
-  footer a {
-    justify-content: center;
-  }
-}
 footer p {
   margin-left: 8px;
+}
+
+/*                                    Affichage Tablette                                      */
+@media screen and (min-width: 699px) {
+  /*                                      Main                                        */
+  /*                               Fonctionnement section                                   */
+  .fonct {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .fonct__title {
+    width: 100%;
+  }
+  .fonct__box {
+    width: 32%;
+    margin: 0 auto;
+  }
+  .fonct__box__nb {
+    width: 25px;
+    height: 25px;
+  }
+  .fonct__box__icon {
+    margin-right: 1em;
+  }
+  /*                                 Restaurants section                                   */
+  .restos a {
+    width: 48%;
+    margin: 0.5em auto;
+  }
+  /*                                      Footer                                        */
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer li {
+    margin: 10px 0 0 0;
+  }
+  footer a {
+    justify-content: center;
+  }
+}
+/*                                    Affichage Desktop                                      */
+@media (min-width: 992px) {
+  /*                               Fonctionnement section                                   */
+  .fonct__box {
+    width: 30.6%;
+  }
+  /*                                 Restaurants section                                   */
+  .restos a {
+    width: 48%;
+    height: auto;
+    margin: 1em auto;
+  }
+  .card-image {
+    height: 80%;
+  }
+  .card-legend {
+    height: 20%;
+  }
+  /*                                      Footer                                        */
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer li {
+    margin: 10px 0 0 0;
+  }
+  footer a {
+    justify-content: center;
+  }
 }

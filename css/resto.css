@@ -290,20 +290,6 @@ footer {
   height: 195px;
   padding: 20px;
 }
-@media screen and (min-width: 699px) {
-  footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-@media (min-width: 992px) {
-  footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
 footer h2 {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
@@ -312,16 +298,6 @@ footer h2 {
 footer li {
   list-style: none;
   margin: 20px 0;
-}
-@media screen and (min-width: 699px) {
-  footer li {
-    margin: 10px 0 0 0;
-  }
-}
-@media (min-width: 992px) {
-  footer li {
-    margin: 10px 0 0 0;
-  }
 }
 footer ul {
   padding: 0;
@@ -332,16 +308,56 @@ footer a {
   display: flex;
   align-items: baseline;
 }
-@media screen and (min-width: 699px) {
-  footer a {
-    justify-content: center;
-  }
-}
-@media (min-width: 992px) {
-  footer a {
-    justify-content: center;
-  }
-}
 footer p {
   margin-left: 8px;
+}
+
+/*                                    Affichage Tablette                                      */
+@media screen and (min-width: 699px) {
+  /*                                      Header                                        */
+  /*                                   Main section                                   */
+  .menu-card__item__price {
+    width: auto;
+    margin: 0 1em;
+  }
+  /*                                      Footer                                        */
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer li {
+    margin: 10px 0 0 0;
+  }
+  footer a {
+    justify-content: center;
+  }
+}
+/*                                    Affichage Desktop                                      */
+@media screen and (min-width: 992px) {
+  /*                                      Header                                        */
+  /*                                   Main section                                   */
+  .img-box {
+    height: 400px;
+  }
+  .tri {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .menu__box {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .menu__box:nth-child(3) {
+    order: 2;
+  }
+  .menu__box:nth-child(2) {
+    margin-top: 1em;
+    order: 3;
+    width: 60%;
+  }
+  .command-button {
+    margin-top: 1.5em;
+  }
+  /*                                      Footer                                        */
 }
