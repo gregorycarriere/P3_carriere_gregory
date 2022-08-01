@@ -32,7 +32,7 @@ h1 {
   margin: auto;
   width: 200px;
   height: 200px;
-  animation: affich-loader 1.5s forwards;
+  animation: affich-loader 1s forwards;
 }
 .loader__spinner {
   width: 220px;
@@ -42,7 +42,7 @@ h1 {
   border-top: 16px solid #9356DC;
   border-left: 16px solid #FF79DA;
   border-right: 16px solid #99E2D0;
-  animation: spin 1.5s linear;
+  animation: spin 1s linear;
   margin: auto;
 }
 .loader__logo {
@@ -117,8 +117,16 @@ h1 {
     transform: translateY(0);
   }
 }
+@keyframes check-spin {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .content {
-  animation: affich 1.75s;
+  animation: affich 1s;
 }
 
 /*                                      Header                                      */
@@ -219,29 +227,39 @@ h1 {
   background-color: #fff;
   border-radius: 15px;
   display: flex;
-  justify-content: space-between;
   height: 68px;
-  width: auto;
-  padding: 0.7em;
+  justify-content: space-between;
   margin-bottom: 0.8em;
   opacity: 0;
+  cursor: pointer;
+  overflow: hidden;
   box-shadow: 0 0.2em 0.5em 0.2em rgba(210, 210, 210, 0.562);
-  animation: fadeInUp 1s linear forwards;
+  animation: fadeInUp 1s linear 1s forwards;
+}
+.menu-card__item:hover {
+  box-shadow: 0 0.2em 0.5em 0.2em rgb(197, 197, 197);
+}
+.menu-card__item:hover .check {
+  margin-right: 0;
+}
+.menu-card__item:hover .check__icon {
+  animation: check-spin 350ms linear forwards;
 }
 .menu-card__item:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 1.2s;
 }
 .menu-card__item:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 1.4s;
 }
 .menu-card__item:nth-child(4) {
-  animation-delay: 0.8s;
+  animation-delay: 1.6s;
 }
 .menu-card__item__text {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 85%;
+  justify-content: space-between;
+  padding: 0.7em 0 0.7em 0.7em;
+  min-width: 0;
 }
 .menu-card__item__text h3 {
   font-size: 1.1em;
@@ -250,20 +268,39 @@ h1 {
   text-overflow: ellipsis;
 }
 .menu-card__item__text p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-size: 0.95em;
   font-weight: 400;
   color: rgb(77, 77, 77);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-card__item__price {
   font-weight: 700;
   font-size: 0.97em;
+  height: inherit;
+  margin-left: 1em;
+  color: black;
+  display: flex;
+}
+.menu-card__item__price p {
   align-self: flex-end;
-  width: 15%;
-  padding: 0 0 0.2em 0.5em;
-  color: rgb(77, 77, 77);
+  margin: 0 1.5em 0.8em 0;
+}
+
+.check {
+  background-color: #99E2D0;
+  height: inherit;
+  border-radius: 0 15px 15px 0;
+  width: 75px;
+  display: flex;
+  margin-right: -75px;
+  transition: all 350ms linear;
+}
+.check__icon {
+  color: #fff;
+  margin: auto 30%;
+  font-size: 1.7em;
 }
 
 .command-button {
@@ -295,12 +332,12 @@ footer h2 {
   font-weight: 100;
   font-size: 1.2em;
 }
-footer li {
+footer ul {
   list-style: none;
   margin: 20px 0;
-}
-footer ul {
   padding: 0;
+}
+footer li {
   margin: 8px 0;
 }
 footer a {
@@ -316,15 +353,24 @@ footer p {
 @media screen and (min-width: 699px) {
   /*                                      Header                                        */
   /*                                   Main section                                   */
-  .menu-card__item__price {
-    width: auto;
-    margin: 0 1em;
+  .menu__head__title {
+    margin: 0.6em auto;
+  }
+  .box-type {
+    margin-left: 8%;
+  }
+  .menu-card {
+    width: 70%;
+    margin: auto;
   }
   /*                                      Footer                                        */
   footer {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  footer ul {
+    margin: 8px 0;
   }
   footer li {
     margin: 10px 0 0 0;
@@ -336,13 +382,22 @@ footer p {
 /*                                    Affichage Desktop                                      */
 @media screen and (min-width: 992px) {
   /*                                      Header                                        */
+  .header__return {
+    left: 23%;
+  }
   /*                                   Main section                                   */
   .img-box {
-    height: 400px;
+    height: 600px;
   }
   .tri {
     display: flex;
     flex-wrap: wrap;
+  }
+  .box-type {
+    margin-left: 0;
+  }
+  .menu-card {
+    width: auto;
   }
   .menu__box {
     margin: 0 auto;

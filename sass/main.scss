@@ -39,7 +39,7 @@ $sub-title-size:1.1em;
     margin: auto;
     width: 200px;
     height: 200px;
-    animation: affich-loader 1.5s forwards; 
+    animation: affich-loader 1s forwards; 
 
     &__spinner{
         width: 220px;
@@ -49,7 +49,7 @@ $sub-title-size:1.1em;
         border-top: 16px solid $primary-color;
         border-left: 16px solid $secondary-color;
         border-right: 16px solid $tertiary-color;
-        animation: spin 1.5s linear;
+        animation: spin 1s linear;
         margin: auto;
         
     }
@@ -116,7 +116,7 @@ $sub-title-size:1.1em;
 
 
 .content{
-    animation: affich 1.75s;
+    animation: affich 1.2s;
 }
 
 /*                                      Header                                      */
@@ -273,20 +273,20 @@ $sub-title-size:1.1em;
         border-radius: 15px;
         
     }
+}
 
-    a{
-        color: black;
-        display: flex;
-        flex-direction: column;
-        height: 255px;
-        width: 100%;
-        border-radius: 15px;
-        margin-bottom: 1.1em;
-        box-shadow: 0 0.2em 0.5em 0.1em rgb(223, 223, 223);
+.resto-card{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 255px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1.1em;
+    box-shadow: 0 0.2em 0.5em 0.1em rgb(223, 223, 223);
 
-        &:hover{
-            box-shadow: 0 0.2em 0.1em 0.1em rgb(197, 197, 197);
-        }
+    &:hover{
+        box-shadow: 0 0.2em 0.1em 0.1em rgb(197, 197, 197);
     }
 }
 
@@ -332,11 +332,15 @@ $sub-title-size:1.1em;
     border-radius: 0 0 15px 15px;
     height: 30%;
     justify-content: space-between;
+    
+    
 
     &__text{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        width: 100%;
+        color: black;
     }
 
     &__like{
@@ -346,11 +350,11 @@ $sub-title-size:1.1em;
         
         &:hover{
             & > .card-legend__like__heart--full{
-                animation: heart-fill 0.2s linear forwards;
+                animation: heart-fill 0.3s linear forwards;
             }
 
             & > .card-legend__like__heart{
-                animation: heart-reset 0.4s linear forwards;
+                animation: heart-reset 0.6s linear forwards;
             }
         }
 
@@ -389,13 +393,13 @@ footer{
         font-weight: 100;
         font-size: 1.2em;
     }
-    li{
+    ul{
         list-style: none;
         margin: 20px 0;
+        padding: 0;
     }
 
-    ul{
-        padding: 0;
+    li{
         margin: 8px 0;
     }
      
@@ -441,12 +445,9 @@ footer{
     }
 
     /*                                 Restaurants section                                   */
-    .restos{
-
-        a{
-            width: 48%;
-            margin: 0.5em auto;
-        }
+    .resto-card{
+        width: 48%;
+        margin: 1em auto;
     }
 
 
@@ -455,6 +456,10 @@ footer{
         display: flex;
         align-items: center;
         flex-direction: column;
+
+        ul{
+            margin: 8px 0;
+        }
 
         li{
             margin: 10px 0 0 0;
@@ -479,13 +484,8 @@ footer{
     }
 
     /*                                 Restaurants section                                   */
-    .restos{
-
-        a{
-            width: 48%;
-            height: auto;
-            margin: 1em auto;
-        }
+    .resto-card{
+        height: auto;
     }
 
     .card-image{
@@ -497,18 +497,6 @@ footer{
     }
 
     /*                                      Footer                                        */
-    footer{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        li{
-            margin: 10px 0 0 0;
-        }
-
-        a{
-            justify-content: center;
-        }
-    }
+    
 }
 
